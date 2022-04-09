@@ -1,13 +1,13 @@
 package br.com.JavaWeb.DAO;
 
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
-import javax.transaction.Transaction;
 
 import br.com.JavaWeb.util.HibernateUtil;
 
@@ -59,7 +59,7 @@ public class GenericDAO<Entidade> {
 		
 		try {
 			transacao = sessao.beginTransaction();
-			sessao.save(entidade);
+			sessao.merge(entidade);
 			transacao.commit();
 		} catch (RuntimeException e) {
 			if (transacao != null) {

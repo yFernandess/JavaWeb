@@ -8,6 +8,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.faces.event.ActionEvent;
 
+import org.omnifaces.util.Messages;
+
 import br.com.JavaWeb.DAO.EstadoDAO;
 import br.com.JavaWeb.domain.Estado;
 
@@ -38,6 +40,7 @@ public class EstadoBean implements Serializable {
 			estados = estadoDAO.listar();
 			
 		} catch (RuntimeException e) {
+			Messages.addGlobalError("Ocorreu um erro ao tentar listar os estados!");
 			e.printStackTrace();
 		}
 	}
@@ -53,7 +56,9 @@ public class EstadoBean implements Serializable {
 			estadoDAO.excluir(estado);
 			
 			estados = estadoDAO.listar();
+			Messages.addGlobalInfo("Removido com sucesso!");
 		} catch (RuntimeException e) {
+			Messages.addGlobalError("Ocorreu um erro ao tentar excluir os estados!");
 			e.printStackTrace();
 		}
 	}
@@ -65,7 +70,9 @@ public class EstadoBean implements Serializable {
 
 			estado = new Estado();
 			estados = estadoDAO.listar();
+			Messages.addGlobalInfo("Salvo com sucesso!");
 		} catch (RuntimeException e) {
+			Messages.addGlobalError("Ocorreu um erro ao tentar salvar os estados!");
 			e.printStackTrace();
 		}
 	}
