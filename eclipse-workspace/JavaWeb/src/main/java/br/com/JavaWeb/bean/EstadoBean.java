@@ -23,12 +23,15 @@ public class EstadoBean implements Serializable {
 	public Estado getEstado() {
 		return estado;
 	}
+
 	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
+
 	public ArrayList<Estado> getEstados() {
 		return estados;
 	}
+	
 	public void setEstados(ArrayList<Estado> estados) {
 		this.estados = estados;
 	}
