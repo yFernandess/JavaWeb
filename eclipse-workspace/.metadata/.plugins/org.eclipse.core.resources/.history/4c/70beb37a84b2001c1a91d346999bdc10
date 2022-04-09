@@ -1,0 +1,13 @@
+import br.com.JavaWeb.DAO.EstadoDAO;
+import br.com.JavaWeb.domain.Estado;
+
+public class EstadoDAOTest {
+
+	public static void main(String[] args) {
+		EstadoDAO estadoDAO = new EstadoDAO();
+		
+		Estado estado = new Estado(1L);
+
+	}
+
+}

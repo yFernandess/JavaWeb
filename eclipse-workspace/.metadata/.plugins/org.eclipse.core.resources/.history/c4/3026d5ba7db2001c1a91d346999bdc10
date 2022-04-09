@@ -1,0 +1,13 @@
+package br.com.JavaWeb.domain;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
+public class Estado extends GenericDomain {
+	
+	@Column
+	private String sigla;
+	
+	private String nome;
+}

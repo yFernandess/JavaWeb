@@ -1,0 +1,51 @@
+package br.com.JavaWeb.DAO;
+
+import org.hibernate.Session;
+import javax.transaction.Transaction;
+
+import br.com.JavaWeb.util.HibernateUtil;
+
+public class GenericDAO<Entidade> {
+	
+	private Class<Entidade> classe;
+	
+	public void salvar(Entidade entidade) {
+		Session sessao = HibernateUtil.getFabricaDeSessoes().openSession();
+		Transaction transacao = null;
+		
+		try {
+			transacao = sessao.beginTransaction();
+			sessao.save(entidade);
+			transacao.commit();
+		} catch (RuntimeException e) {
+			if (transacao != null) {
+				transacao.rollback();
+			}
+			throw e;
+		} finally {
+			sessao.close();
+		}
+	}
+	
+	public void excluir(Entidade entidade) {
+		Session sessao = HibernateUtil.getFabricaDeSessoes().openSession();
+		Transaction transacao = null;
+		
+		try {
+			transacao = sessao.beginTransaction();
+			sessao.delete(entidade);
+			transacao.commit();
+		} catch (RuntimeException e) {
+			if (transacao != null) {
+				transacao.rollback();
+			}
+			throw e;
+		} finally {
+			sessao.close();
+		}
+	}
+	
+	public Estado buscar(long id) {
+		
+	}
+}

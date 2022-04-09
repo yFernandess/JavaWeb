@@ -1,0 +1,5 @@
+package br.com.JavaWeb.DAO;
+
+public class EstadoDAO extends GenericDAO {
+
+}

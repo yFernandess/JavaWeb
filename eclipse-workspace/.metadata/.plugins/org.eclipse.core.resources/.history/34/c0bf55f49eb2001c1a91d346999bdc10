@@ -1,0 +1,7 @@
+package br.com.JavaWeb.DAO;
+
+import br.com.JavaWeb.domain.Cidade;
+
+public class CidadeDAO extends GenericDAO<Cidade>{
+
+}

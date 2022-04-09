@@ -1,0 +1,34 @@
+import br.com.JavaWeb.DAO.EstadoDAO;
+import br.com.JavaWeb.domain.Estado;
+
+public class EstadoDAOTest {
+
+	public void salvar() {
+		EstadoDAO estadoDAO = new EstadoDAO();
+		Estado estado = new Estado();
+		
+		estado.setNome("Sao Paulo");
+		estado.setSigla("SP");
+		
+		estadoDAO.salvar(estado);
+
+	}
+	
+	public void excluir() {
+		Long codigo = 1L;
+		
+		EstadoDAO estadoDAO = new EstadoDAO();
+		Estado estado = estadoDAO.buscar(codigo);
+		
+		if (estado == null) {
+			System.out.println("Nenhum registro encontrado!");
+		}
+		else {
+			estadoDAO.excluir(estado);
+			System.out.println("Registro removido com sucesso!");
+		}
+		}
+		
+	}
+
+}

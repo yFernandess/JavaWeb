@@ -1,0 +1,37 @@
+package br.com.JavaWeb.bean;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+
+import br.com.JavaWeb.domain.Estado;
+
+@ViewScoped
+@ManagedBean(name = "estadoBean")
+public class EstadoBean implements Serializable {
+	
+	private Estado estado;
+	private ArrayList<Estado> estados;
+
+	public Estado getEstado() {
+		return estado;
+	}
+	public void setEstado(Estado estado) {
+		this.estado = estado;
+	}
+	public ArrayList<Estado> getEstados() {
+		return estados;
+	}
+	public void setEstados(ArrayList<Estado> estados) {
+		this.estados = estados;
+	}
+	
+	@PostConstruct
+	public void listar() {
+		
+	}
+	
+	
+}

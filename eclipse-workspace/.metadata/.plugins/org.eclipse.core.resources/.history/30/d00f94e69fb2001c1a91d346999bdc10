@@ -1,0 +1,13 @@
+import br.com.JavaWeb.DAO.EstadoDAO;
+import br.com.JavaWeb.domain.Cidade;
+import br.com.JavaWeb.domain.Estado;
+
+public class CidadeDAOTest {
+
+	public void salvar() {
+		EstadoDAO estadoDAO = new EstadoDAO();
+		Estado estado = new Estado();
+		
+		Cidade cidade = new Cidade();
+	}
+}

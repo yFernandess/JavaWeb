@@ -1,0 +1,13 @@
+
+public class Principal {
+
+	public static void main(String[] args) {
+		EstadoDAOTest estadoTest = new EstadoDAOTest();
+		
+		estadoTest.buscar();
+		estadoTest.excluir();
+		estadoTest.salvar();
+		estadoTest.listar();
+	}
+
+}

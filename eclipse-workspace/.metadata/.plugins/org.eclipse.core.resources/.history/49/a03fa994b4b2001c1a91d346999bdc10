@@ -1,0 +1,10 @@
+package br.com.JavaWeb.bean;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+
+@ViewScoped
+@ManagedBean(name = "estadoBean")
+public class EstadoBean {
+
+}

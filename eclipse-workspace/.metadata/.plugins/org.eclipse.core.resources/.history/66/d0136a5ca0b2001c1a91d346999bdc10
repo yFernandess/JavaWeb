@@ -1,0 +1,16 @@
+
+public class Principal {
+
+	public static void main(String[] args) {
+		EstadoDAOTest estadoTest = new EstadoDAOTest();
+		
+		
+		//Testar um método por vez
+		estadoTest.buscar();
+		estadoTest.excluir();
+		estadoTest.salvar();
+		estadoTest.listar();
+		estadoTest.editar();
+	}
+
+}

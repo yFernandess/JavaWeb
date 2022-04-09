@@ -1,0 +1,5 @@
+package br.com.JavaWeb.domain;
+
+public class Cidade {
+
+}

@@ -1,0 +1,5 @@
+package br.com.JavaWeb.util;
+
+public class HibernateUtil {
+
+}
